@@ -12,10 +12,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   color: rgb(87, 87, 86);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  overflow-x: hidden;
 }
 :root {
   --main-color: #ba9764;
