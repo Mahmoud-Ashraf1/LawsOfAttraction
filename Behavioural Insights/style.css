@@ -1,0 +1,382 @@
+.container {
+  max-width: calc(100% - var(--spacing)) !important;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  :root {
+    --spacing: 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: rgb(87, 87, 86);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+:root {
+  --main-color: #ba9764;
+  --spacing: 21vw;
+}
+
+a {
+  text-decoration: none !important;
+  color: rgb(87, 87, 86);
+}
+ul {
+  list-style: none;
+}
+
+/*==============
+    ============
+    Start banner
+    ============
+===============*/
+
+.banner {
+  background: url(../main/images/behavioural-banner.jpg) center / cover;
+  width: 100%;
+  height: 50em;
+}
+.banner .overlay-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: 800;
+}
+.banner .overlay-text h3 {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  padding: 0 calc(25vw);
+  font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1900 - 300)));
+}
+@media (max-width: 762px) {
+  .banner .overlay-text h3 {
+    padding: 2em;
+  }
+}
+/* Start text */
+header {
+  background-image: url(../main/images/lightweb-background.jpg);
+  background-size: 1500px;
+}
+
+header .text {
+  text-align: center;
+  padding: 1vw;
+  margin-top: 3vw;
+}
+header .text h2 {
+  color: var(--main-color);
+}
+header .text p {
+  font-size: calc(0.7em + 0.5vw);
+  padding: 0 calc(1em + 9vw);
+  margin-top: 30px;
+}
+
+header .text a {
+  font-size: 1em;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+header .text a::after {
+  content: '';
+  position: absolute;
+  right: -1.4em;
+  top: calc(50% - 0.25em);
+  width: 0.7em;
+  height: 0.7em;
+  transform: rotateZ(45deg);
+  border: 1px solid #000;
+  border-bottom: 0;
+  border-left: 0;
+}
+header .text a:hover,
+header .text a:hover::after {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/*==============
+    ============
+    End banner
+    ============
+===============*/
+
+/*==============
+    ============
+    Start section1
+    ============
+===============*/
+.section1 {
+  padding-top: 4vw;
+}
+
+.section1 article {
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 100px;
+}
+.section1 article img {
+  width: 100%;
+  /* transform: translateY(-50px); */
+  /* opacity: 0; */
+}
+@keyframes scale-in {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.section1 article h3 {
+  margin: 30px 0;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+.section1 article p {
+  font-weight: 300;
+  font-size: 1.2em;
+}
+.section1 article button {
+  /* Learn more button */
+  margin: 30px 0;
+  font-weight: 300;
+  font-size: 1.1em;
+  padding: 0.3em 0.5em;
+  border: 0;
+}
+.section1 article button:hover {
+  transition: background 0.5s ease;
+  background: var(--main-color);
+  color: #fff;
+}
+.section1 article ul {
+  font-weight: 200;
+  font-size: 0.7em;
+  list-style: disc;
+}
+.section1 article ul h4 {
+  text-decoration: underline;
+  font-size: calc(11px + (19 - 11) * ((100vw - 300px) / (1900 - 300)));
+}
+.section1 article li {
+  margin-left: 30px;
+  font-weight: 200;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.section1 article .link a:hover,
+
+/*==============
+    ============
+    End section1
+    ============
+===============*/
+
+
+/*==============
+    ============
+    Start Quotes
+    ============
+===============*/
+
+section.quotes {
+  display: flex;
+  justify-content: center;
+  padding: 3em calc(1em + 24vw);
+  flex-wrap: wrap;
+  background-color: #121212c8;
+  background-image: url(../main/images/darkweb-background.png);
+  background-size: 1500px;
+}
+.quote {
+  flex: 5 0 45%;
+  font-size: calc(0.7em + 1vw);
+}
+.quote p {
+  color: rgb(216, 214, 214);
+  line-height: 1.3;
+  margin-top: 2em;
+  font-size: calc(11px + (31 - 11) * ((100vw - 300px) / (1900 - 300)));
+  font-weight: 100;
+}
+.quote .saying {
+  color: rgb(228, 226, 226);
+  font-size: 1.7rem;
+}
+.quote .saying span {
+  color: var(--main-color);
+  font-size: 0.7em;
+  font-weight: 400;
+}
+.quote .saying i {
+  color: rgb(210, 210, 210);
+  font-weight: 200;
+
+  font-size: 0.75em;
+}
+.quotes .pagination {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  margin-top: 75px;
+}
+.quotes .pagination button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #bbb;
+  border: 0;
+  margin: 1em 1em;
+  outline: none;
+}
+.quotes .pagination button.active {
+  background-color: #eee;
+}
+/*==============
+    ============
+    End Quotes
+    ============
+===============*/
+
+/*==============
+    ============
+    Start contact section
+    ============
+===============*/
+
+#contact {
+  background-color: #faf8f2;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+#contact .text {
+  padding: 2vw;
+  padding-top: 0;
+}
+#contact .text h3 {
+  font-size: calc(1em + 2.2vw);
+  margin-bottom: 1em;
+}
+#contact .text p {
+  font-size: calc(0.7em + 0.5vw);
+}
+#contact .text img {
+  width: 150px;
+  /* background-color: tr; */
+}
+
+/* Form */
+
+form h6 {
+  font-weight: 200;
+  font-size: calc(0.7em + 0.5vw);
+}
+form .text-field {
+  width: 100%;
+  height: 2.5em;
+  border: 2px solid #bbb;
+  margin-bottom: 1em;
+}
+
+/* Radio buttons */
+.radios h6 {
+  flex-basis: 100%;
+  font-size: calc(0.6em + 0.5vw);
+  margin-bottom: 1em;
+}
+form .radios {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+.radios .radio {
+  flex-basis: 20%;
+}
+.radios .radio label {
+  font-size: 0.88em;
+}
+form .radios .custom-control-input {
+  width: calc(1em + 0.47vw);
+  height: calc(1em + 0.47vw);
+  flex: 0 0 30px;
+  cursor: pointer;
+}
+.custom-checkbox {
+  display: flex;
+  justify-content: flex-start;
+}
+.form-check .custom-control-input {
+  flex: 5 0 60%;
+  font-size: calc(0.35em + 0.5vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+/* Cahnging fill color */
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  border-radius: 50%;
+}
+.custom-radio .custom-control-input:active ~ .custom-control-label::before {
+  color: var(--main-color);
+  background-color: var(--main-color);
+}
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 5px 1px var(--main-color);
+}
+
+/* input feilds outline */
+input.text-field:focus {
+  outline: var(--main-color) 1px solid;
+}
+/* check box */
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 5px 1px var(--main-color);
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: var(--main-color);
+}
+
+/*Submit button*/
+#submit {
+  max-height: calc(1.5em + 1.2vw);
+  outline: none;
+  border: 0;
+  background-color: #ddd;
+  color: #777;
+  font-weight: 300;
+  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1900 - 300)));
+  padding: 0vw 2.8vw;
+  margin-left: 3vw;
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+#submit:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/*==============
+    ============
+    End contact section
+    ============
+===============*/
