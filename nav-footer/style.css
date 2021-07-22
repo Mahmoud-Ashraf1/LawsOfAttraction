@@ -8,7 +8,10 @@
 ::-webkit-scrollbar-thumb:hover {
   opacity: 1;
 }
-
+ol,
+ul {
+  padding-left: unset;
+}
 html {
   max-width: 100vw;
   overflow-x: hidden;
